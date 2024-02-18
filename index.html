@@ -7,14 +7,21 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <!-- raleway font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     <style>
         .font-raleway{
             font-family: "Raleway", sans-serif;
+        }
+        .font-inter{
+            font-family: "Inter", sans-serif;
         }
     </style>
 </head>
@@ -52,12 +59,45 @@
             </div>
           </div>
           <!-- banner -->
-          <div class="bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url('images/banner.png')] bg-center bg-cover h-screen my-8 rounded-xl">
+          <div class="bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(0,0,0,0.1)),url('images/banner.png')] bg-center bg-cover h-screen my-8 rounded-xl relative">
 
             <div class="flex flex-col items-center justify-center h-full text-white text-center">
                 <h1 class="text-xl md:text-6xl font-extrabold leading-normal">End-to-End Travel with <br> <span class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="md:w-[60%] mx-auto p-5 text-sm md:text-base text-[#d1cdcd]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
                 <button class="px-4 py-3 bg-[#1DD100] text-black font-bold rounded-xl text-lg">Buy Tickets</button>
+            </div>
+
+            <div class="grid w-full md:grid-cols-3 absolute px-4 py-5 gap-5  md:px-28 top-[88%]">
+                <!-- div1 -->
+                <div class="flex justify-center shadow-xl border p-4 rounded-xl gap-4 border-b-2 border-b-[#1DD100] bg-white">
+                    <div>
+                        <img src="images/people.png">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold font-inter">500K+</h3>
+                        <p class="text-sm font-medium">Registered users</p>
+                    </div>
+                </div>
+                <!-- div2 -->
+                <div class="flex justify-center shadow-xl border p-4 rounded-xl gap-4 border-b-2 border-b-[#1DD100] bg-white">
+                    <div>
+                        <img src="images/ticket-cupon.png">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold font-inter">1.7 lacks</h3>
+                        <p class="text-sm font-medium">Tickets sold</p>
+                    </div>
+                </div>
+                <!-- div3 -->
+                <div class="flex justify-center shadow-xl border p-4 rounded-xl gap-4 border-b-2 border-b-[#1DD100] bg-white">
+                    <div>
+                        <img src="images/stoppage.png">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-extrabold font-inter">80K+</h3>
+                        <p class="text-sm font-medium">Rental partners</p>
+                    </div>
+                </div>
             </div>
 
           </div>
