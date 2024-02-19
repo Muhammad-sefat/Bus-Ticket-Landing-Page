@@ -5,11 +5,8 @@ let totalPrice = 0;
 
 for(let seat of seats){
     seat.addEventListener('click',function(e){
-
-        // double click check
-    
       
-        // count
+     // count
         count++;
         if(count > 4){
             alert('You have already selected four seat.');
@@ -21,7 +18,7 @@ for(let seat of seats){
         let newSeatNumber = seatNumber - 1;
         setNumberElementById('seat-number',newSeatNumber);
 
-    //    increase number
+    // increase number
        let conterNumber = parseInt(document.getElementById('counter-number').innerText);
        let newCountNumber = conterNumber + 1;
        setNumberElementById('counter-number',newCountNumber);
@@ -37,11 +34,11 @@ for(let seat of seats){
         totalPrice += perPrice;
         setNumberElementById("total-price",totalPrice)
         
-     //update grand total price
+     // update grand total price
       setNumberElementById('grand-total',totalPrice);
 
     
-      // coupon
+      // Update grand total with coupon
       const inputValue = document.getElementById('input-value');
       const grandTotal = document.getElementById('grand-total'); 
       
