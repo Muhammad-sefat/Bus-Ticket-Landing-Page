@@ -9,7 +9,7 @@ for(let seat of seats){
         // count
         count++;
         if(count > 4){
-            alert('You have already select four seat.');
+            alert('You have already selected four seat.');
             return;
         }
 
@@ -31,7 +31,6 @@ for(let seat of seats){
 
      // update total price
         const perPrice = parseInt(document.getElementById('per-price').innerText);
-        // const totalPrice = parseInt(document.getElementById('total-price').innerText);
         totalPrice += perPrice;
         setNumberElementById("total-price",totalPrice)
         
