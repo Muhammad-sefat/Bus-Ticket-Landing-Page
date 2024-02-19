@@ -52,6 +52,17 @@ for(let seat of seats){
     })
 }
 
+// popup
+const popup = document.getElementById('popup');
+const showPopup = document.getElementById('show-popup');
+const closePopup = document.getElementById('close-popup');
+showPopup.addEventListener('click',function(){
+    popup.classList.remove('hidden');
+})
+closePopup.addEventListener('click',function(){
+    popup.classList.add('hidden');
+})
+
 function setNumberElementById(elementId,value){
     const element = document.getElementById(elementId);
     element.innerText = value;
