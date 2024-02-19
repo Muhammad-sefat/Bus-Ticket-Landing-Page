@@ -4,7 +4,10 @@ let totalPrice = 0;
         
 
 for(let seat of seats){
-    seat.addEventListener('click',function(){
+    seat.addEventListener('click',function(e){
+
+        // double click check
+    
       
         // count
         count++;
@@ -37,32 +40,34 @@ for(let seat of seats){
      //update grand total price
       setNumberElementById('grand-total',totalPrice);
 
-
+    
       // coupon
       const inputValue = document.getElementById('input-value');
       const grandTotal = document.getElementById('grand-total'); 
-
+      
       inputValue.addEventListener('click',function(){
-
         const applyContainer = document.getElementById('apply-container');
         const firstCoupon = document.getElementById('first-coupon').innerText;
         const secondCoupon = document.getElementById('second-coupon').innerText;
         const input = document.getElementById('input').value;
         const newInput1 = input.toUpperCase().split(" ").join("");
         const newInput2 = input.split(" ").join(" ").charAt(0).toUpperCase() + input.slice(1).toLowerCase();
-        console.log(newInput2);
+        applyContainer.classList.add('hidden');
 
-      if(newInput1 === firstCoupon){
-        const discountValue = totalPrice * 15 / 100;
-        const remainValue = totalPrice - discountValue;
-              grandTotal.innerText = remainValue;
-      }else if(newInput2 === secondCoupon){
-        const discountValue = totalPrice * 20 / 100;
-        const remainValue = totalPrice - discountValue;
-              grandTotal.innerText = remainValue;
-      }
-      document.getElementById('input').value = "";
-      applyContainer.classList.add('hidden');
+        
+        if(newInput1 === firstCoupon){
+            const discountValue = totalPrice * 15 / 100;
+            const remainValue = totalPrice - discountValue;
+            grandTotal.innerText = remainValue;
+
+        }else if(newInput2 === secondCoupon){
+            const discountValue = totalPrice * 20 / 100;
+            const remainValue = totalPrice - discountValue;
+            grandTotal.innerText = remainValue;
+        }else{
+            applyContainer.classList.remove('hidden')
+        }
+            
     })
 
     // append price
@@ -80,7 +85,6 @@ for(let seat of seats){
         li.appendChild(p2);
         li.appendChild(p3);
         appendDiv.appendChild(li);
-
     })
 }
 
